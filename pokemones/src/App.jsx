@@ -1,5 +1,5 @@
 import React from "react";
-import { Pokemones } from "./components/Pokemones/index";
+import Pokemones from "./components/Pokemones/index.jsx";
 import { Provider } from "react-redux";
 import generateStore from "./redux/store";
 

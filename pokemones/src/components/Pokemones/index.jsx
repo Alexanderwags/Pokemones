@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { obtenerPokemonesAccion } from "../../redux/pokeDucks";
 const Pokemones = () => {
   const dispatch = useDispatch();
-  const pokemones = useSelector((store) => store.pokemones);
+  const pokemones = useSelector((store) => store.pokemones.array);
   console.log(pokemones);
   function getData() {
     dispatch(obtenerPokemonesAccion());

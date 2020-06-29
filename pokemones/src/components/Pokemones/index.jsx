@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { obtenerPokemonesAccion } from "../../redux/pokeDucks";
 import { siguientePokemonAccion } from "./../../redux/pokeDucks";
+import Pokemon from "../pokemon";
 const Pokemones = () => {
   const dispatch = useDispatch();
   const pokemones = useSelector((store) => store.pokemones.array);
@@ -19,7 +20,7 @@ const Pokemones = () => {
       <button onClick={sigData}>Siguiente</button>
       <ul>
         {pokemones.map((item) => (
-          <li key={item.name}>{item.name}</li>
+          <Pokemon key={item.name} title={item.name} url={item.url} />
         ))}
       </ul>
     </div>
